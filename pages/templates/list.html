@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% for page1 in page_list %}
+	{% comment %}
+	<!-- <a href="{% url 'page-detail' page.id %}"> -->
+	{% endcomment %}
+	<a href="{{ page1.get_absolute_url }}">{{ page1.title }}</a>
+	<ul>
+		<li>{{page1.title}}</li>
+		<li>{{page1.last_update}}</li>
+	</ul>
+	{%endfor%}
+
+</body>
+</html>
